@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Cardlist from "./CarList";
 import { robots } from "./robots";
 import SearchBox from "./SearchBox";
+import "./App.css";
 
 // Main App component that manages state and renders the UI
 class App extends Component {
@@ -27,7 +28,7 @@ class App extends Component {
 
     return (
       <div className="tc">
-        <h1>FaceBots</h1>
+       <h1 className="f-headline yellow mt4 mb3">FaceBots</h1>
         {/* SearchBox receives the handler as a prop */}
         <SearchBox searchChange={this.onSearchChange} />
         {/* Cardlist receives the filtered robots as a prop */}
