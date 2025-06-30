@@ -7,8 +7,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Futuristic, moderately vibrant gradient background */
-  background: linear-gradient(135deg, #232526 0%, #38495a 40%, #5b6eae 80%, #3a7bd5 100%);
+  /* Bioshock-inspired, cartoonish art deco gradient: navy, teal, gold, navy */
+  background: linear-gradient(
+    135deg,
+    #1a2639 0%,
+    #1a2639 25%,
+    #25727a 40%,   /* teal */
+    #bfa14a 50%,   /* gold */
+    #25727a 60%,   /* teal */
+    #1a2639 75%,
+    #1a2639 100%
+  );
   background-attachment: fixed;
 }
 
