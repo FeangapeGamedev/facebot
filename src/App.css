@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'ParklaneDG2d';
+  src: url('./Parklane-DG2d.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ParkLaneNf';
+  src: url('./ParkLaneNf-pRdR.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Only set the custom font for h1, let Tachyons handle size, color, spacing */
+h1 {
+  font-family: 'ParklaneNf', cursive, sans-serif;
+}

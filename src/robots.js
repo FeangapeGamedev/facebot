@@ -1,3 +1,4 @@
+// Array of robot objects used as mock data for the app
 export const robots = [
   {
     id: 1,
