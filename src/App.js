@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Cardlist from "./CarList";
 import SearchBox from "./SearchBox";
+import Scroll from "./Scroll";
 import "./App.css";
 
 // Main App component that manages state and renders the UI
@@ -41,8 +42,11 @@ class App extends Component {
        <h1 className="f-headline yellow mt4 mb3">FaceBots</h1>
         {/* SearchBox receives the handler as a prop */}
         <SearchBox searchChange={this.onSearchChange} />
-        {/* Cardlist receives the filtered robots as a prop */}
-        <Cardlist robots={filteredRobots} />
+        <Scroll>
+          {/* Cardlist receives the filtered robots as a prop */}
+          <Cardlist robots={filteredRobots} />
+        </Scroll>
+ 
       </div>
      );
     }
