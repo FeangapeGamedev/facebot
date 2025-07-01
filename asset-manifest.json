@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/facebot/static/css/main.5f637814.css",
+    "main.js": "/facebot/static/js/main.f5c9d7cb.js",
+    "static/media/ParkLaneNf-pRdR.ttf": "/facebot/static/media/ParkLaneNf-pRdR.abcbdd924d9ff20f8fd4.ttf",
+    "static/media/Parklane-DG2d.ttf": "/facebot/static/media/Parklane-DG2d.7cc78e1e6068a71c647f.ttf",
+    "index.html": "/facebot/index.html",
+    "main.5f637814.css.map": "/facebot/static/css/main.5f637814.css.map",
+    "main.f5c9d7cb.js.map": "/facebot/static/js/main.f5c9d7cb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5f637814.css",
+    "static/js/main.f5c9d7cb.js"
+  ]
+}
