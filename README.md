@@ -1,6 +1,6 @@
 # FaceBot
 
-FaceBot is a simple React project that displays a list of robot "users" in a card-based UI. It serves as a fun demonstration of React fundamentals, including components, props, state, and event handling. The app allows users to search through a list of robots, filtering the displayed cards in real time.
+FaceBot is a simple React project that displays a list of robot "users" in a card-based UI. It demonstrates React fundamentals, including components, props, state, and event handling. The app allows users to search through a list of robots, filtering the displayed cards in real time.
 
 ## Features
 
@@ -32,18 +32,27 @@ FaceBot is a simple React project that displays a list of robot "users" in a car
    ```bash
    npm start
    ```
-
-4. **Open in your browser:**
-   Visit [http://localhost:3000](http://localhost:3000) to view the app.
+   The app will open automatically in a new window.
 
 ## Project Structure
 
-- `src/App.js` - Main app component, manages state and renders UI.
-- `src/Card.js` - Displays individual robot info.
-- `src/CarList.js` - Renders a list of `Card` components.
-- `src/SearchBox.js` - Search input for filtering robots.
-- `src/robots.js` - Mock data for robot users.
-- `src/index.css` - Basic styling.
+```
+src/
+  components/
+    Card.js         # Displays individual robot info
+    CardList.js     # Renders a list of Card components
+    Scroll.js       # Scrollable wrapper for content
+    SearchBox.js    # Search input for filtering robots
+  containers/
+    App.js          # Main app component, manages state and renders UI
+    Fonts.js        # Font loading and configuration
+  robots.js         # Mock data for robot users
+  index.css         # Basic styling
+```
+
+- **components/**: Presentational components (stateless, UI only)
+- **containers/**: Components that manage state and logic (e.g., App)
+- **robots.js**: Mock data for robot users
 
 ## Credits
 
