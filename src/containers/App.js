@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Cardlist from "./CarList";
-import SearchBox from "./SearchBox";
-import Scroll from "./Scroll";
+import Cardlist from "../components/CarList";
+import SearchBox from "../components/SearchBox";
+import Scroll from "../components/Scroll";
 import "./App.css";
 
 // Main App component that manages state and renders the UI
@@ -19,8 +19,9 @@ class App extends Component {
   componentDidMount() {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then(response => response.json()) // Parse the JSON from the response
-      .then(users => {this.setState({ robots: users });  // Update the state with the fetched users
-      })
+      .then(users => {
+        this.setState({ robots: users });  // Update the state with the fetched users
+      });
   }
 
   // Handler for updating the search field state when user types
@@ -29,27 +30,25 @@ class App extends Component {
   };
 
   render() {
+    const { robots, searchfield } = this.state;
     // Filter robots based on the search field input (case-insensitive)
-    const filteredRobots = this.state.robots.filter((robots) => {
-      return robots.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
+    const filteredRobots = robots.filter((robot) => {
+      return robot.name.toLowerCase().includes(searchfield.toLowerCase());
     });
 
-    if(this.state.robots.length === 0){
-      return <h1>Loading</h1>
-    } else{
-          return (
+    return !robots.length ? (
+      <h1>Loading</h1>
+    ) : (
       <div className="tc">
-       <h1 className="f-headline yellow mt4 mb3">FaceBots</h1>
+        <h1 className="f-headline yellow mt4 mb3">FaceBots</h1>
         {/* SearchBox receives the handler as a prop */}
         <SearchBox searchChange={this.onSearchChange} />
         <Scroll>
           {/* Cardlist receives the filtered robots as a prop */}
           <Cardlist robots={filteredRobots} />
         </Scroll>
- 
       </div>
-     );
-    }
+    );
   }
 }
 
